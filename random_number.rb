@@ -1,12 +1,28 @@
-def number
-  return rand(1..2)
+
+def ask
+  puts "Please guess a number from 1 to 5"
+return gets.chomp
 end
 
-puts "Please guess a number from 1 to 2"
-guess = gets.chomp.to_i
-puts number
-  if guess != number
-    puts "please guess another number."
-  else
-    puts "You win!"
+def attempts
+  attempts += 1
+end
+
+attempts = 0
+answer = rand(1..5)
+guesses = []
+guess = 0
+
+until attempts == 5 || guess == answer
+guess = ask.to_i
+guesses << guess
+  if guesses.includes? guess
+    puts "You already guessed. Pay attention!"
+  elsif guess < answer
+    attempts += 1
+    puts "Your guess is too low."
+  elsif guess > answer
+    attempts += 1
+    puts "Your guess is too high."
   end
+end
