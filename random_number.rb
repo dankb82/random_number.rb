@@ -16,13 +16,13 @@ guess = 0
 until attempts == 5 || guess == answer
 guess = ask.to_i
 guesses << guess
-  if guesses.includes? guess
-    puts "You already guessed. Pay attention!"
-  elsif guess < answer
+  if guess < answer
     attempts += 1
     puts "Your guess is too low."
   elsif guess > answer
     attempts += 1
     puts "Your guess is too high."
+  else
+    puts "You win!!"
   end
 end
