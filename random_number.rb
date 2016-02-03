@@ -18,7 +18,7 @@ guess = ask.to_i
   if guess == 0
     puts "Only pick a number from 1 to 100!"
   elsif guesses.include? (guess.to_i)
-    puts "You guessed that alread, dummy. Pay attention!"
+    puts "You guessed that already, dummy. Pay attention!"
   elsif guess < answer
     guesses << guess
     attempts += 1
