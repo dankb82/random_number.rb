@@ -1,7 +1,6 @@
 
 def ask
-  puts "I'm thinking of a number from 1 to 100.
-  You have 5 chances to guess it."
+  puts "I'm thinking of a number from 1 to 100."
 return gets.chomp
 end
 
